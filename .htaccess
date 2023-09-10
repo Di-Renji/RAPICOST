@@ -1,0 +1,11 @@
+RewriteEngine On
+
+# Para los archivos en RAPICOST
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^RAPICOST/([^/]+)/?$ RAPICOST/$1.php [L]
+
+# Para los archivos en app
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^app/([^/]+)/?$ app/$1.php [L]
